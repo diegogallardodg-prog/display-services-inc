@@ -1,0 +1,11 @@
+# Local Netlify folder
+.netlify
+
+# macOS
+.DS_Store
+
+# Deploy zips
+*.zip
+
+# Manifests
+IMAGE_MANIFEST.txt
