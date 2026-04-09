@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wholesale & Trade Partners | Display Services Inc.</title>
+  <meta name="description" content="DSI fabricates signs for other sign companies. Wholesale pricing, fast turnaround, consistent quality. El Paso, Texas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .wholesale-hero {
+      min-height: 50vh;
+      display: flex;
+      align-items: center;
+      background:
+        radial-gradient(ellipse 70% 60% at 30% 50%, rgba(200,168,75,0.07) 0%, transparent 60%),
+        var(--bg-primary);
+      padding: 140px 0 80px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .wholesale-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,168,75,0.1);
+      border: 1px solid rgba(200,168,75,0.25);
+      border-radius: 100px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 24px;
+    }
+
+    .wholesale-title {
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      color: var(--white);
+    }
+
+    .wholesale-title .hl { color: var(--accent-gold); }
+
+    .wholesale-sub {
+      font-size: 1.05rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 520px;
+      margin-bottom: 36px;
+    }
+
+    .wholesale-body {
+      padding: 80px 0;
+    }
+
+    .wholesale-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .wholesale-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .wholesale-list-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+    }
+
+    .wholesale-list-item::before {
+      content: '✓';
+      width: 22px;
+      height: 22px;
+      min-width: 22px;
+      background: rgba(200,168,75,0.12);
+      border: 1px solid rgba(200,168,75,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--accent-gold);
+      font-weight: 700;
+    }
+
+    .wholesale-sidebar {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+    }
+
+    .wholesale-sidebar h3 {
+      font-size: 1.2rem;
+      font-family: var(--font-sans);
+      margin-bottom: 6px;
+    }
+
+    .wholesale-sidebar > p {
+      font-size: 0.88rem;
+      color: var(--text-secondary);
+      margin-bottom: 28px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .trade-products { display: flex; flex-direction: column; gap: 12px; }
+
+    .trade-product {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 16px;
+      background: var(--bg-secondary);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: all var(--transition);
+    }
+
+    .trade-product:hover {
+      border-color: rgba(200,168,75,0.3);
+    }
+
+    .trade-product-name {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-primary);
+    }
+
+    .trade-product-tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      background: rgba(200,168,75,0.1);
+      border: 1px solid rgba(200,168,75,0.2);
+      padding: 3px 10px;
+      border-radius: 100px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      margin-bottom: 32px;
+      transition: color var(--transition);
+    }
+
+    .back-link:hover { color: var(--text-primary); }
+
+    @media (max-width: 768px) {
+      .wholesale-grid { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav id="main-nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-badge">DSI</div>
+        <div class="nav-logo-text">
+          <span>Display Services Inc.</span>
+          <span>El Paso, Texas</span>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="/#portfolio">Portfolio</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="wholesale.html" class="nav-wholesale">Wholesale</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="/#contact" class="btn btn-primary">Get a Quote</a>
+      </div>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <div class="wholesale-hero">
+    <div class="container">
+      <a href="/" class="back-link">← Back to Main Site</a>
+      <div class="wholesale-badge">⚙️ Trade & Wholesale</div>
+      <h1 class="wholesale-title">
+        We Build It.<br>
+        <span class="hl">You Sell It.</span>
+      </h1>
+      <p class="wholesale-sub">
+        Display Services Inc. is a trusted fabrication partner for sign companies. We manufacture high-quality signs at wholesale rates — you present them to your clients under your brand.
+      </p>
+      <a href="/#contact" class="btn btn-gold btn-lg">Contact Us About Wholesale →</a>
+    </div>
+  </div>
+
+  <!-- BODY -->
+  <div class="wholesale-body">
+    <div class="container">
+      <div class="wholesale-grid">
+
+        <div>
+          <span class="section-label">How It Works</span>
+          <h2 class="section-title" style="font-size:2.2rem;margin-bottom:16px;">A Reliable Fabrication Partner in Your Corner</h2>
+          <p style="font-size:0.95rem;color:var(--text-secondary);line-height:1.7;margin-bottom:32px;">
+            Whether you're a sign company looking to expand your production capacity or a reseller who needs a reliable manufacturer — DSI can handle the fabrication while you focus on your clients.
+          </p>
+
+          <div class="wholesale-list">
+            <div class="wholesale-list-item">Wholesale pricing with volume discounts available</div>
+            <div class="wholesale-list-item">Fast, reliable turnaround for your project deadlines</div>
+            <div class="wholesale-list-item">Consistent quality across every order</div>
+            <div class="wholesale-list-item">Confidential — we ship to you, not your client</div>
+            <div class="wholesale-list-item">All standard sign types fabricated in-house</div>
+            <div class="wholesale-list-item">Rush orders available — call to discuss</div>
+            <div class="wholesale-list-item">Direct communication with Sydney throughout</div>
+          </div>
+
+          <a href="/#contact" class="btn btn-gold">Get in Touch →</a>
+        </div>
+
+        <div class="wholesale-sidebar">
+          <h3>What We Fabricate</h3>
+          <p>Any sign you sell — we can build. Call or email to discuss your project.</p>
+          <div class="trade-products">
+            <div class="trade-product">
+              <span class="trade-product-name">Channel Letters (Standard & Reverse)</span>
+              <span class="trade-product-tag">Exterior</span>
+            </div>
+            <div class="trade-product">
+              <span class="trade-product-name">Illuminated Cabinet Signs</span>
+              <span class="trade-product-tag">Exterior</span>
+            </div>
+            <div class="trade-product">
+              <span class="trade-product-name">Dimensional & Halo-Lit Letters</span>
+              <span class="trade-product-tag">Interior</span>
+            </div>
+            <div class="trade-product">
+              <span class="trade-product-name">Monument & Pylon Signs</span>
+              <span class="trade-product-tag">Exterior</span>
+            </div>
+            <div class="trade-product">
+              <span class="trade-product-name">Vinyl Graphics & Large Format</span>
+              <span class="trade-product-tag">All Types</span>
+            </div>
+            <div class="trade-product">
+              <span class="trade-product-name">Custom Environmental Signage</span>
+              <span class="trade-product-tag">Specialty</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-bottom" style="border-top:1px solid var(--border);padding-top:32px;">
+        <span>© 2026 Display Services Inc. All rights reserved.</span>
+        <a href="/" style="color:var(--accent-blue);font-size:0.88rem;">← Back to Main Site</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

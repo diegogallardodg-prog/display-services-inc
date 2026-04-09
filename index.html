@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Display Services Inc. | El Paso's Sign Experts</title>
+  <meta name="description" content="Display Services Inc. — El Paso, Texas. Custom exterior & interior signs, channel letters, vinyl graphics, and banners. Built right here in El Paso." />
+  <meta property="og:title" content="Display Services Inc. | El Paso Sign Experts" />
+  <meta property="og:description" content="Premium custom signage in El Paso, TX. Channel letters, monument signs, vinyl graphics, and more." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== EMAIL CAPTURE POPUP ===================== -->
+  <div id="email-popup" class="popup-overlay" aria-hidden="true">
+    <div class="popup-card">
+      <button class="popup-close" id="popup-close" aria-label="Close">✕</button>
+      <div class="popup-badge">📍 El Paso, Texas</div>
+      <div class="popup-logo">DSI</div>
+      <h2 class="popup-title">Get a Free<br><span class="popup-highlight">Quote Estimate</span></h2>
+      <p class="popup-sub">Leave your email and Sydney will personally reach out with a custom quote for your project — no pressure, no spam.</p>
+      <form class="popup-form" id="popup-form" name="email-capture" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="email-capture" />
+        <input type="hidden" name="bot-field" />
+        <div class="popup-input-group">
+          <input type="text" name="name" placeholder="Your name" class="popup-input" required />
+          <input type="email" name="email" placeholder="Your email address" class="popup-input" required />
+          <button type="submit" class="btn btn-gold btn-lg popup-submit">Get My Free Quote →</button>
+        </div>
+        <p class="popup-privacy">No spam. Just a real quote from a real person.</p>
+      </form>
+      <div class="popup-success" id="popup-success" style="display:none;">
+        <div class="popup-success-icon">✓</div>
+        <p>Thanks! Sydney will be in touch shortly.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav id="main-nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-logo">
+        <div class="nav-logo-badge">DSI</div>
+        <div class="nav-logo-text">
+          <span>Display Services Inc.</span>
+          <span>El Paso, Texas</span>
+        </div>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="wholesale.html" class="nav-wholesale">Wholesale</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary">Get a Quote</a>
+      </div>
+
+      <div class="nav-toggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-noise"></div>
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-pill">
+          <div class="hero-pill-dot"></div>
+          El Paso's Sign Fabrication Experts
+        </div>
+
+        <h1 class="hero-title">
+          Your Brand.<br>
+          <span class="hl">Built to Last.</span>
+        </h1>
+
+        <p class="hero-sub">
+          From custom channel letters to large-scale monument signs — Display Services Inc. fabricates professional signage that makes El Paso businesses impossible to miss.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#contact" class="btn btn-primary btn-lg">Get a Free Quote →</a>
+          <a href="#portfolio" class="btn btn-ghost btn-lg">See Our Work</a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <span class="hero-stat-num" data-count="500" data-suffix="+">500+</span>
+            <span class="hero-stat-label">Signs Fabricated</span>
+          </div>
+          <div>
+            <span class="hero-stat-num" data-count="15" data-suffix="+">15+</span>
+            <span class="hero-stat-label">Years in El Paso</span>
+          </div>
+          <div>
+            <span class="hero-stat-num" data-count="100" data-suffix="%">100%</span>
+            <span class="hero-stat-label">Custom Fabricated</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <a href="#portfolio" class="hero-scroll">
+      <span>See Our Work</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- ===================== PORTFOLIO ===================== -->
+  <section id="portfolio">
+    <div class="container">
+
+      <div class="portfolio-top reveal">
+        <div>
+          <span class="label">Our Work</span>
+          <h2 class="portfolio-title">Built in El Paso.<br>Seen Everywhere.</h2>
+        </div>
+        <p class="portfolio-desc">Every project is custom — designed and fabricated right here in El Paso.</p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="portfolio-filters reveal">
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="manufacturing">Sign Manufacturing</button>
+        <button class="filter-btn" data-filter="interior">Interior Signs</button>
+        <button class="filter-btn" data-filter="print">Print &amp; Graphics</button>
+        <button class="filter-btn" data-filter="specialty">Specialty</button>
+      </div>
+
+      <!-- Bento Portfolio Grid -->
+      <div class="portfolio-bento">
+
+        <!-- 1. EPISD Day — big hero tile (span 7, 2 rows) -->
+        <div class="p-item reveal" data-category="manufacturing">
+          <img class="p-img" src="images/episd-day.jpg" alt="EPISD large monument sign — daytime"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🏛️</span>
+            <span>EPISD Monument Sign</span>
+            <span class="p-placeholder-tag">Large Freestanding · Exterior</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Exterior · Monument Sign</span>
+            <div class="p-title">EPISD</div>
+            <div class="p-sub">Large freestanding dimensional letters with custom steel structure</div>
+          </div>
+        </div>
+
+        <!-- 2. Uptown Cheapskate — CDN (span 5) -->
+        <div class="p-item reveal reveal-d1" data-category="manufacturing">
+          <img class="p-img" src="https://static.wixstatic.com/media/5fc21d_fcf2abc6fea14f498f028b2f55acf5d0~mv2.png" alt="Uptown Cheapskate channel letters sign"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🛍️</span>
+            <span>Uptown Cheapskate</span>
+            <span class="p-placeholder-tag">Channel Letters · Exterior</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Exterior · Channel Letters</span>
+            <div class="p-title">Uptown Cheapskate</div>
+            <div class="p-sub">Northeast El Paso storefront channel letters</div>
+          </div>
+        </div>
+
+        <!-- 3. FOY Springs — CDN (span 5) -->
+        <div class="p-item reveal reveal-d2" data-category="manufacturing">
+          <img class="p-img" src="https://static.wixstatic.com/media/5fc21d_88555480470c438682993aa80246aa2d~mv2.png" alt="FOY Springs channel letters on blue building"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">💧</span>
+            <span>FOY Springs Water</span>
+            <span class="p-placeholder-tag">Channel Letters · Exterior</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Exterior · Channel Letters</span>
+            <div class="p-title">FOY Springs</div>
+            <div class="p-sub">Multi-color channel letters on blue building facade</div>
+          </div>
+        </div>
+
+        <!-- 4. EPISD Night — local (span 4) -->
+        <div class="p-item reveal" data-category="manufacturing">
+          <img class="p-img" src="images/episd-night.jpg" alt="EPISD illuminated sign at night"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">💡</span>
+            <span>EPISD — Night</span>
+            <span class="p-placeholder-tag">LED Illuminated · Exterior</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Exterior · LED Illuminated</span>
+            <div class="p-title">EPISD — Night</div>
+            <div class="p-sub">Internal LED illumination for 24/7 visibility</div>
+          </div>
+        </div>
+
+        <!-- 5. Panera Bread — CDN (span 4) -->
+        <div class="p-item reveal reveal-d1" data-category="manufacturing">
+          <img class="p-img" src="https://static.wixstatic.com/media/5fc21d_f567a37db1234c02a66edc8009e6e052~mv2.jpg" alt="Panera Bread exterior sign"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🥖</span>
+            <span>Panera Bread</span>
+            <span class="p-placeholder-tag">Exterior Sign</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Exterior · Brand Sign</span>
+            <div class="p-title">Panera Bread</div>
+            <div class="p-sub">Custom exterior signage fabrication</div>
+          </div>
+        </div>
+
+        <!-- 6. Aloft Hotel — CDN (span 4) -->
+        <div class="p-item reveal reveal-d2" data-category="manufacturing">
+          <img class="p-img" src="https://static.wixstatic.com/media/5fc21d_0d41c16595554b6eba3d1cd7d5d6e80e~mv2.jpg" alt="Aloft Hotel Downtown El Paso sign"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🏨</span>
+            <span>Aloft Hotel</span>
+            <span class="p-placeholder-tag">Exterior · Downtown El Paso</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Exterior · Hotel Signage</span>
+            <div class="p-title">Aloft Hotel</div>
+            <div class="p-sub">Downtown El Paso — exterior building signage</div>
+          </div>
+        </div>
+
+        <!-- 7. La Madeline — CDN (span 5) -->
+        <div class="p-item reveal" data-category="manufacturing">
+          <img class="p-img" src="https://static.wixstatic.com/media/5fc21d_e2e6cf6a5b4545a28b41bf083cc39842~mv2.png" alt="La Madeleine Eastlake El Paso sign"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🥐</span>
+            <span>La Madeleine</span>
+            <span class="p-placeholder-tag">Exterior · Eastlake</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Exterior · Restaurant Sign</span>
+            <div class="p-title">La Madeleine</div>
+            <div class="p-sub">Eastlake El Paso — custom restaurant signage</div>
+          </div>
+        </div>
+
+        <!-- 8. Patriot Mortgage — local (span 4) -->
+        <div class="p-item reveal reveal-d1" data-category="interior">
+          <img class="p-img" src="images/patriot-mortgage.jpg" alt="Patriot Mortgage interior halo-lit sign"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🏦</span>
+            <span>Patriot Mortgage</span>
+            <span class="p-placeholder-tag">Halo-Lit · Interior</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Interior · Halo-Lit</span>
+            <div class="p-title">Patriot Mortgage</div>
+            <div class="p-sub">Reverse channel letters with premium halo backlighting</div>
+          </div>
+        </div>
+
+        <!-- 9. Sports Fun Grub — CDN (span 3) -->
+        <div class="p-item reveal reveal-d2" data-category="manufacturing">
+          <img class="p-img" src="https://static.wixstatic.com/media/5fc21d_06f605d6eeca4087a7be44522adaa001~mv2.jpg" alt="Sports Fun Grub marquee letters"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🎯</span>
+            <span>Sports Fun Grub</span>
+            <span class="p-placeholder-tag">Marquee Letters</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Exterior · Marquee Letters</span>
+            <div class="p-title">Sports Fun Grub</div>
+            <div class="p-sub">Custom marquee lettering</div>
+          </div>
+        </div>
+
+        <!-- 10. Chihuahuan Desert — local (span 5) -->
+        <div class="p-item reveal" data-category="specialty">
+          <img class="p-img" src="images/chihuahuan-desert.jpg" alt="Chihuahuan Desert environmental signage"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🌵</span>
+            <span>The Chihuahuan Desert</span>
+            <span class="p-placeholder-tag">Environmental · Corten Steel</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Specialty · Environmental</span>
+            <div class="p-title">Chihuahuan Desert</div>
+            <div class="p-sub">Custom corten steel letters on natural rock</div>
+          </div>
+        </div>
+
+        <!-- 11. Interior Sign — CDN (span 7) -->
+        <div class="p-item reveal reveal-d1" data-category="interior">
+          <img class="p-img" src="https://static.wixstatic.com/media/a3c153_6f27754e06844d62a1708b316797fc08~mv2.jpg" alt="Interior dimensional sign"
+            onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+          <div class="p-placeholder" style="display:none;">
+            <span class="p-placeholder-icon">🏢</span>
+            <span>Interior Dimensional Sign</span>
+            <span class="p-placeholder-tag">Dimensional Letters · Interior</span>
+          </div>
+          <div class="p-overlay">
+            <span class="p-cat">Interior · Dimensional Sign</span>
+            <div class="p-title">Interior Fabrication</div>
+            <div class="p-sub">Custom dimensional letters and lobby signage</div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="portfolio-cta-bar reveal">
+        <p>Every sign you see was <strong>custom-designed and built by our team</strong> right here in El Paso.</p>
+        <a href="#contact" class="btn btn-primary">Start Your Project →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="services">
+    <div class="container">
+
+      <div class="services-header reveal">
+        <span class="label">Two Divisions. One Team.</span>
+        <h2>Everything Your Business<br>Needs Under One Roof</h2>
+        <p>DSI operates two specialized divisions — sign manufacturing and print & graphics — so you never have to go anywhere else.</p>
+      </div>
+
+      <!-- SERVICE SEARCH -->
+      <div class="search-wrap reveal">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="service-search"
+          class="service-search-input"
+          placeholder="Search for a sign type... (e.g. channel letters, vehicle wrap, banner)"
+          autocomplete="off"
+        />
+        <button class="service-search-clear" id="search-clear" style="display:none;" aria-label="Clear search">✕</button>
+        <p class="search-hint" id="search-hint"></p>
+      </div>
+
+      <div id="services-catalog">
+
+      <!-- DIVISION 1: SIGN MANUFACTURING -->
+      <div class="division-block reveal" data-division="manufacturing">
+        <div class="division-header">
+          <div class="division-num">01</div>
+          <div>
+            <div class="division-title-text">Sign Manufacturing</div>
+            <p class="division-sub">Custom-fabricated illuminated and structural signs built in El Paso from raw materials to final install.</p>
+          </div>
+        </div>
+
+        <div class="division-grid">
+          <div class="svc-card" data-keywords="channel letters front lit illuminated storefront exterior led">
+            <span class="svc-icon">💡</span>
+            <div>
+              <h4>Channel Letter Signs</h4>
+              <p>Custom-built individual letters for storefronts — lit, fabricated, and installed to spec.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Front-Lit</span><span class="svc-tag">Reverse / Halo-Lit</span>
+                <span class="svc-tag">Open Face</span><span class="svc-tag">Backlit</span>
+                <span class="svc-tag">Combination</span><span class="svc-tag">Push-Thru</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="monument ground freestanding exterior business community">
+            <span class="svc-icon">🏛️</span>
+            <div>
+              <h4>Monument Signs</h4>
+              <p>Freestanding ground signs for businesses, developments, and institutions — built to last.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Single-Tenant</span><span class="svc-tag">Multi-Tenant</span>
+                <span class="svc-tag">Illuminated</span><span class="svc-tag">Non-Illuminated</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="pylon pole sign roadside shopping center highway tall">
+            <span class="svc-icon">🗼</span>
+            <div>
+              <h4>Pylon &amp; Pole Signs</h4>
+              <p>High-visibility elevated signs for shopping centers, gas stations, hotels, and highway frontage.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Single Pole</span><span class="svc-tag">Double Pole</span>
+                <span class="svc-tag">Multi-Tenant</span><span class="svc-tag">LED Cabinet</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="led cabinet illuminated light box backlit panel sign">
+            <span class="svc-icon">🔷</span>
+            <div>
+              <h4>LED &amp; Cabinet Signs</h4>
+              <p>Illuminated cabinet signs and custom LED builds for maximum visibility day and night.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Light Box</span><span class="svc-tag">LED Modules</span>
+                <span class="svc-tag">Backlit Panels</span><span class="svc-tag">Custom Cabinets</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="ada compliance braille tactile room id wayfinding accessible">
+            <span class="svc-icon">♿</span>
+            <div>
+              <h4>ADA Signs</h4>
+              <p>Fully compliant ADA signage with braille, tactile characters, and correct specs for any facility.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Room IDs</span><span class="svc-tag">Braille</span>
+                <span class="svc-tag">Directional</span><span class="svc-tag">ADA Compliant</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="dimensional letters lobby interior office wall 3d raised halo">
+            <span class="svc-icon">🏢</span>
+            <div>
+              <h4>Interior &amp; Lobby Signs</h4>
+              <p>Dimensional letters, halo-lit logos, and wall signs that brand your space from the inside out.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Lobby Logos</span><span class="svc-tag">Halo-Lit</span>
+                <span class="svc-tag">Dimensional Letters</span><span class="svc-tag">Office Signs</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="storefront building facade exterior business awning blade">
+            <span class="svc-icon">🏪</span>
+            <div>
+              <h4>Storefront &amp; Building Signs</h4>
+              <p>Complete storefront sign solutions — from awning signs to blade signs and hanging systems.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Awning Signs</span><span class="svc-tag">Blade Signs</span>
+                <span class="svc-tag">Hanging Signs</span><span class="svc-tag">Post & Panel</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="wayfinding directional navigation indoor outdoor floor campus">
+            <span class="svc-icon">🗺️</span>
+            <div>
+              <h4>Wayfinding &amp; Directional</h4>
+              <p>Navigation systems for campuses, medical facilities, hotels, and large commercial spaces.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Indoor Wayfinding</span><span class="svc-tag">Outdoor Directional</span>
+                <span class="svc-tag">Floor Signs</span><span class="svc-tag">Campus Maps</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="church school real estate construction tenant restaurant retail safety industry">
+            <span class="svc-icon">🏗️</span>
+            <div>
+              <h4>Specialty &amp; Industry Signs</h4>
+              <p>Signs built for specific industries — churches, construction, real estate, restaurants, and more.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Church Signs</span><span class="svc-tag">Real Estate Signs</span>
+                <span class="svc-tag">Construction Signs</span><span class="svc-tag">Safety Signs</span>
+                <span class="svc-tag">Restaurant Signs</span><span class="svc-tag">Tenant Signs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- DIVISION 2: PRINT & GRAPHICS -->
+      <div class="division-block division-print reveal" data-division="print">
+        <div class="division-header">
+          <div class="division-num g">02</div>
+          <div>
+            <div class="division-title-text">Print &amp; Graphics</div>
+            <p class="division-sub">Large format printing, vinyl graphics, vehicle wraps, and display solutions for businesses of every size.</p>
+          </div>
+        </div>
+
+        <div class="division-grid">
+          <div class="svc-card" data-keywords="vinyl graphics window wall decals cut printed film graphics">
+            <span class="svc-icon">🎨</span>
+            <div>
+              <h4>Vinyl Graphics</h4>
+              <p>Cut and printed vinyl for windows, walls, floors, and vehicles — any surface, any size.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Window Graphics</span><span class="svc-tag">Wall Murals</span>
+                <span class="svc-tag">Floor Graphics</span><span class="svc-tag">Perforated Film</span>
+                <span class="svc-tag">Vinyl Lettering</span><span class="svc-tag">Vinyl Clings</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="vehicle wrap car truck van fleet boat bus trailer partial full wrap">
+            <span class="svc-icon">🚗</span>
+            <div>
+              <h4>Vehicle Wraps &amp; Graphics</h4>
+              <p>Full and partial wraps for any vehicle — from personal cars to full commercial fleets.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Car Wraps</span><span class="svc-tag">Truck Wraps</span>
+                <span class="svc-tag">Van Wraps</span><span class="svc-tag">Fleet Wraps</span>
+                <span class="svc-tag">Bus Wraps</span><span class="svc-tag">Trailer Wraps</span>
+                <span class="svc-tag">Vehicle Decals</span><span class="svc-tag">Vehicle Magnets</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="banner print vinyl mesh large format event trade show real estate promotional">
+            <span class="svc-icon">🖨️</span>
+            <div>
+              <h4>Banners &amp; Large Format Prints</h4>
+              <p>High-quality printing for events, promotions, real estate, and trade shows — fast turnaround.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Vinyl Banners</span><span class="svc-tag">Mesh Banners</span>
+                <span class="svc-tag">Step & Repeat</span><span class="svc-tag">Trade Show Displays</span>
+                <span class="svc-tag">Retractable Banners</span><span class="svc-tag">Promotional Banners</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="frame a-frame sidewalk snap poster display sign holder">
+            <span class="svc-icon">🖼️</span>
+            <div>
+              <h4>Frame Signs &amp; Displays</h4>
+              <p>Snap frames, A-frames, sidewalk signs, and display systems for retail and wayfinding.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">A-Frame Signs</span><span class="svc-tag">Snap Frames</span>
+                <span class="svc-tag">Sidewalk Signs</span><span class="svc-tag">Poster Displays</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="flag flagpole feather custom printed business dealership event">
+            <span class="svc-icon">🚩</span>
+            <div>
+              <h4>Flags &amp; Flagpoles</h4>
+              <p>Custom printed flags and full flagpole systems for businesses, dealerships, and events.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Custom Flags</span><span class="svc-tag">Feather Flags</span>
+                <span class="svc-tag">Flagpoles</span><span class="svc-tag">Flag Hardware</span>
+              </div>
+            </div>
+          </div>
+          <div class="svc-card" data-keywords="yard sign temporary real estate portable promotional construction election">
+            <span class="svc-icon">📌</span>
+            <div>
+              <h4>Yard &amp; Temporary Signs</h4>
+              <p>Affordable, fast-turnaround signs for real estate, events, construction, and promotions.</p>
+              <div class="svc-tags">
+                <span class="svc-tag">Yard Signs</span><span class="svc-tag">Coroplast Signs</span>
+                <span class="svc-tag">Real Estate Signs</span><span class="svc-tag">Construction Signs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div><!-- end #services-catalog -->
+
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="reveal">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-num" data-count="15" data-suffix="+">15+</div>
+              <div class="stat-label">Years Serving<br>El Paso</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" data-count="500" data-suffix="+">500+</div>
+              <div class="stat-label">Signs<br>Fabricated</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" data-count="2">2</div>
+              <div class="stat-label">Full-Service<br>Divisions</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-num" data-count="100" data-suffix="%">100%</div>
+              <div class="stat-label">Custom<br>Fabricated</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal reveal-d2">
+          <span class="label">About DSI</span>
+          <h2>El Paso's Sign Shop — Not a Franchise</h2>
+          <p class="sub">
+            Display Services Inc. is a locally owned fabrication shop. That means you talk directly to the people building your sign — from the first call to the final install.
+          </p>
+
+          <div class="feature-list">
+            <div class="feature">
+              <div class="feature-ico">⚙️</div>
+              <div>
+                <h4>Built In-House</h4>
+                <p>Everything is fabricated here in El Paso — no outsourcing, no middleman, no surprises.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-ico">🤝</div>
+              <div>
+                <h4>Personal Service</h4>
+                <p>Sydney handles your project personally. Direct communication, real answers, no runaround.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-ico">📐</div>
+              <div>
+                <h4>Custom from Your Files</h4>
+                <p>We work directly from your logo and brand assets to design the perfect sign for your space.</p>
+              </div>
+            </div>
+            <div class="feature">
+              <div class="feature-ico">⚡</div>
+              <div>
+                <h4>Fast Turnaround</h4>
+                <p>We know your business can't wait. We move fast without cutting corners on quality.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-header reveal">
+        <span class="label">Get In Touch</span>
+        <h2>Ready to Get Started?</h2>
+        <p>Tell us about your project and Sydney will personally reach out with a quote — usually within 1 business day.</p>
+      </div>
+
+      <div class="contact-grid">
+
+        <div class="reveal">
+          <div class="contact-info-stack">
+            <div class="contact-row">
+              <div class="contact-ico">📍</div>
+              <span>El Paso, Texas</span>
+            </div>
+            <div class="contact-row">
+              <div class="contact-ico">📞</div>
+              <span>(915) 820-2276</span>
+            </div>
+            <div class="contact-row">
+              <div class="contact-ico">✉️</div>
+              <span>sydney@dsigraphics.com</span>
+            </div>
+            <div class="contact-row">
+              <div class="contact-ico">🕐</div>
+              <span>Mon – Fri, 8am – 5pm MST</span>
+            </div>
+          </div>
+
+          <div class="contact-note">
+            <span>💬</span>
+            <p>Not sure what you need? That's okay — just describe what you're looking for and Sydney will help you figure out the best solution for your space and budget.</p>
+          </div>
+        </div>
+
+        <div class="form-card reveal reveal-d2">
+          <h3>Request a Quote</h3>
+          <p>We'll get back to you within 1 business day.</p>
+
+          <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <input type="hidden" name="bot-field" />
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="first_name" placeholder="Jane" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="last_name" placeholder="Smith" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="you@company.com" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" name="phone" placeholder="(915) 820-2276" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="company">Business Name</label>
+              <input type="text" id="company" name="company" placeholder="Your Business Name" />
+            </div>
+
+            <div class="form-group">
+              <label for="service">What do you need?</label>
+              <select id="service" name="service">
+                <option value="">Select a service...</option>
+                <option value="exterior">Exterior Signs</option>
+                <option value="interior">Interior Signs</option>
+                <option value="vinyl">Vinyl Graphics</option>
+                <option value="banners">Prints + Banners</option>
+                <option value="vehicle">Vehicle Wraps</option>
+                <option value="other">Not Sure Yet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" name="message" placeholder="What kind of sign are you looking for? Size, location, timeline, colors — anything you know helps us give you an accurate quote."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width:100%;justify-content:center;">
+              Send My Request →
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="nav-logo-badge">DSI</div>
+            <div class="nav-logo-text">
+              <span>Display Services Inc.</span>
+              <span>El Paso, Texas</span>
+            </div>
+          </div>
+          <p>El Paso's trusted, locally owned sign fabrication shop. Custom built. Professionally installed.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Exterior Signs</a></li>
+            <li><a href="#services">Interior Signs</a></li>
+            <li><a href="#services">Vinyl Graphics</a></li>
+            <li><a href="#services">Prints + Banners</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#portfolio">Our Work</a></li>
+            <li><a href="#about">About DSI</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="wholesale.html">Wholesale</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:9158202276">(915) 820-2276</a></li>
+            <li><a href="mailto:sydney@dsigraphics.com">Email Us</a></li>
+            <li><a href="#portfolio">El Paso, Texas</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <span>© 2026 Display Services Inc. All rights reserved.</span>
+        <span>Built by <a href="#" style="color:var(--blue);">AgentDeploy TX</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
